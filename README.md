@@ -15,6 +15,10 @@ The implementations vary widely as they must utilize system calls unique to thei
 
 # Singleton interfacing
 Similar to `Link Time Interfacing`, a single set of definitions can be utilized per execution.
+
 Rather than defining the exact same symbols multiple times, a global set of function pointers is populated from a decision made at run time, however there can be multiple different sets of valid definitions for the interface within a link target. 
-One example of this, though not necessarily a c example, is the command line options used for a command like `tar` or `git`. `tar -cf` and `tar -xf` function entirely differently because they define different implementations for the entrypoint that is actually used.
+
+One example of this, though not necessarily a c example, is the command line options used for commands like `tar` or `git`. 
+
+`tar -cf` and `tar -xf` function entirely differently because they define different implementations for the entrypoint that is actually used.
 
